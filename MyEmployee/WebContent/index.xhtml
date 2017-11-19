@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>My Employee | Holerite</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<style>
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+}
+</style>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" />
+</h:head>
+<h:body>
+
+	<!-- include header -->
+	<ui:include src="include/header.xhtml" />
+
+	<!-- Pagina princiapl -->
+	<main class="container"> <f:view>
+
+		<h:form>
+			<h:dataTable styleClass="table table-striped" var="c"
+				value="#{hybridManagedBean.listEmpregado}">
+				<h:column>
+					<f:facet name="header">
+						<h:outputLabel value="Id" />
+					</f:facet>
+					<h:outputText value="#{c.codigo}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputLabel value="Name" />
+					</f:facet>
+					<h:outputText value="#{c.empregado.nomeCompleto}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header">
+						<h:outputLabel value="Cargo" />
+					</f:facet>
+					<h:outputText value="#{c.cargo}" />
+				</h:column>
+				<h:column>
+					<h:commandLink value="View"
+						action="#">
+						<f:setPropertyActionListener
+							target="#hybridManagedBean" value="#{c}" />
+					</h:commandLink>
+				</h:column>
+
+				<div class="col-md-6">
+					<h:commandLink styleClass="btn btn-primary" value="Save" action="#" />
+					<h:commandLink styleClass="btn btn-default" value="Cancel"
+						action="index?faces-redirect=true" />
+
+				</div>
+
+			</h:dataTable>
+		</h:form>
+	</f:view> </main>
+
+	<!-- include footer -->
+	<ui:include src="include/footer.xhtml" />
+
+</h:body>
+</html>
