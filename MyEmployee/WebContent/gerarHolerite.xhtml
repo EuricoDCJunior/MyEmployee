@@ -29,12 +29,14 @@ body {
 
 	<!-- Pagina princiapl -->
 	<main class="container"> <f:view>
-
+	<h1>Gerar Holerite</h1>
 		<h:form>
 				<div class="form-group">
-					<h:outputLabel for="customerId" value="Id:"/>
-					<h:inputText id="customerId" style="width:35px;" 
-					styleClass="form-control" value="#{hybridManagedBean.holerite.employee.nomeCompleto}"/>
+					<h:outputLabel for="customerId" value="Funcionario:"/>
+					<h:selectOneMenu style="width: 170px;" styleClass="form-control" value="#{hybridManagedBean.listEmpregado}" >
+						<f:selectItem itemValue="0" itemLabel="Selecione"/>
+						<f:selectItems value="#{hybridManagedBean.holerite.employee.codigo}" var="emp" itemValue="#{emp.codigo}}" itemLabel="#{emp.Nome}"/>
+					</h:selectOneMenu>
 				</div>
 				<div class="form-group">
 					<h:outputLabel value="Name:"/>

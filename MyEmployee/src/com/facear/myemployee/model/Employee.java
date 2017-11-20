@@ -5,7 +5,7 @@ import java.util.Date;
 public class Employee 
                  {
 
-	           private int codigo;
+	           private int idEmpregado;
 	           private String nomecompleto;
 	           private Date dataNascimento;
 	           private String cpf;
@@ -33,7 +33,7 @@ public class Employee
 			String telefoneFixo, String telefoneCelular, String cep, String enderecoRua, Integer enderecoNumero,
 			String complemento, String bairro, String cidade, String uf, String email, String status, String sexo) {
 		       super();
-		       this.codigo = codigo;
+		       this.idEmpregado = codigo;
 		       this.nomecompleto = nomeCompleto;
 		       this.dataNascimento = dataNascimento;
 		       this.cpf = cpf;
@@ -53,11 +53,11 @@ public class Employee
 	}
 
 	public int getCodigo() {
-		return codigo;
+		return idEmpregado;
 	}
 
 	public void setCodigo(int codigo) {
-		this.codigo = codigo;
+		this.idEmpregado = codigo;
 	}
 
 	public String getNomeCompleto() {
