@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<!--  IMPORTANDO HEAD -->
+	<ui:include src="incPainel/painelHead.xhtml" />
+</h:head>
+<h:body class="nav-md">
+
+	<div class="container body">
+
+		<div class="main_container">
+
+			<!--  IMPORTANDO MENU PRINCIPAL -->
+			<ui:include src="incPainel/painelMenu.xhtml" />
+
+			<!-- IMPORTANDO MENU TOPO -->
+			<ui:include src="incPainel/painelMenuTopo.xhtml" />
+			<!-- PAGINA PRINCIPAL -->
+
+			<div class="right_col" role="main">
+				<div class="">
+					<!-- INSIRA SEU TITULO -->
+
+					<div class="clearfix"></div>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="x_panel">
+								<div class="x_title">
+									<ul class="nav navbar-right panel_toolbox">
+										<li><a class="collapse-link"><i
+												class="fa fa-chevron-up"></i></a></li>
+										<li class="dropdown"><a href="#" class="dropdown-toggle"
+											data-toggle="dropdown" role="button" aria-expanded="false"><i
+												class="fa fa-wrench"></i></a>
+											<ul class="dropdown-menu" role="menu">
+												<li><a href="#">Configuração</a></li>
+											</ul></li>
+										<li><a class="close-link"><i class="fa fa-close"></i></a>
+										</li>
+									</ul>
+									<div class="clearfix"></div>
+								</div>
+								<div class="x_content">
+									<br />
+
+						<!-- INSIRA SEU <form> -->
+	<main class="container">
+		<h1>Novo Holerite</h1>
+	
+	<div>
+		<hr/>
+			<f:view>
+				<h:form>
+				<div class="form-group,col-lg2 col-md-2 col-sm-2">
+					<h:outputLabel for="holeriteCodigo" value="Codigo:"/>
+					<h:inputText id="holeriteCodigo" disabled="true" styleClass="form-control" value=""/>
+				</div>
+				
+				<div class="form-group,col-lg2 col-md-2 col-sm-2">
+					<h:outputLabel value="Id:"/>
+					<h:inputText  disabled="true" styleClass="form-control" value=""/>
+				</div>
+				<div class="form-group,col-lg8 col-md-8 col-sm-8">
+					<h:outputLabel value="Empregado:"/>
+					<h:inputText disabled="true" styleClass="form-control" value=""/>
+				</div>
+				
+				<div class="form-group,col-lg2 col-md-2 col-sm-2">
+					<h:outputLabel value="Id:"/>
+					<h:inputText  disabled="true" styleClass="form-control" value=""/>
+				</div>
+				<div class="form-group,col-lg10 col-md-10 col-sm-10">
+					<h:outputLabel value="Empregador:"/>
+					<h:inputText disabled="true" styleClass="form-control" value=""/>
+				</div>
+				
+				<div class="form-group,col-lg2 col-md-2 col-sm-2">
+					<h:outputLabel value="Salario Base:"/>
+					<h:inputText styleClass="form-control" value=""/>
+				</div>
+				<div class="form-group,col-lg2 col-md-2 col-sm-2">
+					<h:outputLabel value="IRRF:"/>
+					<h:inputText styleClass="form-control" value=""/>
+				</div>
+				
+				<div class="form-group,col-lg2 col-md-2 col-sm-2">
+					<h:outputLabel value="INSS:"/>
+					<h:inputText styleClass="form-control" value=""/>
+				</div>
+				<div class="form-group,col-lg2 col-md-2 col-sm-2">
+					<h:outputLabel value="Transporte:"/>
+					<h:inputText styleClass="form-control" value=""/>
+				</div>
+				
+				<div class="form-group,col-lg2 col-md-2 col-sm-2">
+					<h:outputLabel value="Desconto:"/>
+					<h:inputText styleClass="form-control" value=""/>
+				</div>
+				<div class="form-group,col-lg2 col-md-2 col-sm-2">
+					<h:outputLabel value="Data Geração:"/>
+					<h:inputText styleClass="form-control" value=""/>
+				</div>
+				
+				<div class="form-group,col-lg2 col-md-2 col-sm-2">
+					<h:outputLabel value="Total Liquido:"/>
+					<h:inputText styleClass="form-control" value=""/>
+				</div>
+				&nbsp;<!-- espaço  -->
+		       <div class="col-lg12 col-md-12 col-sm-12">
+		       <h5>Atenção!Preencha todos os campos solicitados</h5>
+			   </div>	
+				<div id="actions" class="row">
+					<div class="col-md-12">
+					<h:commandLink styleClass="btn btn-primary" value="Save" action="#{customerManagedBean.insertCustomerAction}"/>
+					&nbsp;<!-- espaço  -->
+					<h:commandLink styleClass="btn btn-default" value="Cancel" action="index?faces-redirect=true"/>
+					</div>
+				</div>
+				</h:form>			
+			</f:view>
+	</div>
+</main>
+					<!-- INSIRA SEU </form> -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			
+			<!-- / PAGINA PRINCIPAL -->
+			
+		</div>
+
+		
+
+		<!-- FOOTER PRINCIPAL -->
+		<ui:include src="incPainel/painelFooter.xhtml" />
+		<!-- /FOOTER PRINCIPAL -->
+	</div>
+	<!-- IMPORT JS -->
+	<ui:include src="incPainel/painelImportsJs.xhtml" />
+	<!-- /IMPORT JS -->
+</h:body>
+</html>

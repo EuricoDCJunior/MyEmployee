@@ -1,0 +1,2 @@
+RFN01- Aplicação deverá rodar em ambiemte web.
+RFN02- Aplicação deverá rodar no ( Chrome e Mozilla ).
